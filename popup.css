@@ -1,0 +1,114 @@
+﻿
+/*  USED ON CONTRACTS PAGE  */
+
+/* Some references 
+
+  http://jsfiddle.net/UNs9J/1/
+  https://stackoverflow.com/questions/10243440/how-to-create-a-box-when-mouse-over-text-in-pure-css
+  http://wickham43.net/hoverpopups.php
+
+  THIS CODE HERE
+  http://jsbin.com/ebucoz/25/edit?html,js,output
+*/
+
+
+
+/* this is for the 'a' element position 
+   the images on contracts page
+*/
+a.info{
+    position:relative;    /* this is the key */
+    color:#000;
+    left: -10px;          /* horizontal postion  */
+    text-decoration: none;
+    text-align: center;
+    top: 7px;            /* vertical distance from top */
+  }
+
+
+
+a.info span { display: none }
+
+/*  THE BALLOON   
+  this is for the 'a' element position 
+  the images on contracts page HOVER */
+a.info:hover span { 
+    display: block;
+    position: absolute;
+    top: -80px !important;      /* top edge of the popup from top of window */
+    /*left: -90px;                 moves popup to right 10 */
+    width: 15em;
+    border: 5px solid #74849a;  /*274972*/
+    background-color: white; /* #dddfe2; */
+    color:#000;
+    margin: 0 auto !important;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 2px 2px 5px black;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+  }
+
+  /*  THE BALLON POINT  */
+  a.info:hover span:after { 
+    content: '';
+    position: absolute;
+    bottom: -11px;       /* vertical position of point */
+    width: 10px;         /* width of the point */
+    height: 10px;        /* height of the point */
+    border-bottom: 5px solid #74849a;
+    border-right: 5px solid #74849a;
+    background: #dddfe2; ;
+    left: 50%;           /* centers point in popup */
+    margin-left: -5px;   /* this will move point from center set above */
+    -ms-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+  }
+
+
+  .popupDiv {
+    display: none;
+    background-color: transparent; /* #E9D5D5; */
+    color: #51678e;
+    margin-left: 10px;
+    height: 30px;
+    width: 970px;
+    text-align: center;
+  }
+
+  .popupDiv #lblMsg {
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0 0 10px;
+    color: yellow;
+    text-shadow: 2px 2px 2px red;
+  }
+
+  .popupAdminDiv
+  {
+    margin: 5px 0 0 30px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* hide default close X on dialog */
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}

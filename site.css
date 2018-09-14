@@ -1,0 +1,739 @@
+﻿/*****************************/
+/*           SITE            */
+/*****************************/
+/* 
+----------------------------------------------------------*/
+
+
+/* TEMP FOR ME */
+#btnAdd {
+  margin-left: 40px;
+}
+
+
+
+
+
+
+
+/* type selector body */
+body {
+  font-family: "Lucida Console", Monaco, monospace;
+  background: #1a1f3e !important; /* #b6b7bc !important; */
+  font-size: 14px;
+  margin: 20px 30px 10px 0;
+  padding: 0;
+  color: #053569;
+	max-width: 1920px;
+	min-width: 1020px;
+}
+
+
+a:link, a:visited {
+  color: white;
+}
+
+a:hover {
+  color: #74849a;
+  text-decoration: none;
+}
+
+a:active {
+  color: #034af3;
+}
+
+p {
+  margin-bottom: 10px;
+  line-height: 1.6em;
+}
+
+
+
+select {
+  padding: 5px;
+  display: inline;
+  color: #000044;
+  border: 1px groove black; 
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  color: #053569;
+  font-variant: small-caps;
+  text-transform: none;
+  font-weight: 200;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+h1 {
+  font-size: 1.6em;
+}
+h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4 {
+  font-size: 1.1em;
+}
+h5, h6 {
+  font-size: 1em;
+}
+
+td {
+  vertical-align: top;
+}
+
+span {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink {
+  background-color: #274972; /* #3a4f63; */
+  width: 100%;
+  height: 40px;
+  padding: 0 0 15px 0;
+}
+
+  div.hideSkiplink table {
+    display: inline-table;
+    margin: 2px 0 10px 10px;
+    position: relative;
+}
+
+    div.hideSkiplink table a[class*="_NavigationMenu_"], div.hideSkiplink table a[class*="_NavigationMenu_"]:visited {
+      color: #dde4ec;
+      text-decoration: none;
+      white-space: nowrap;
+      font-variant: normal;
+      padding-right: 8px;
+      font-size: .95em;
+    }
+
+      div.hideSkiplink table a[class*="_NavigationMenu_"]:hover {
+        color: #FFFFFF;
+        text-decoration: underline;
+      }
+
+    div.hideSkiplink table a[disabled="true"] {
+      color: #666666;
+      cursor: not-allowed !important;
+      text-decoration: none;
+    }
+
+      div.hideSkiplink table a[disabled="true"]:hover {
+        color: #666666;
+        text-decoration: none;
+        cursor: not-allowed !important;
+      }
+
+
+
+
+/* DISCLAIMER   
+----------------------------------------------------------*/
+.disclaimer {
+  /* border: solid 1px #EEE; */
+  text-align: center;
+  padding: 10px 10px 30px 10px;
+  margin-bottom: 30px;
+}
+
+  .disclaimer h1:nth-child(n+2) {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  .disclaimer h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  .disclaimer h3 {
+    font-size: 1.0em;
+    font-weight: bold;
+  }
+
+  .disclaimer ul {
+    display: block;
+    margin: 40px auto 40px;
+    width: 75%;
+    text-align: left;
+  }
+
+    .disclaimer ul li {
+      font-size: .97em;
+    }
+
+  .disclaimer input[id$="btnDisclaimer"] {
+    display: inline-block;
+    width: 160px;
+		height: 30px;
+    border: solid 1px #333;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+    .disclaimer input[id$="btnDisclaimer"]:hover {
+      color: #FFFFFF;
+      background-color: #3a4f63;
+    }
+
+    .disclaimer input[id$="btnDisclaimer"]:disabled {
+      border: 1px solid buttonshadow; /* #C0C0C0; */
+      background-color: ButtonShadow;
+      color: #999999;
+      cursor: not-allowed !important;
+    }
+
+.msg {
+  display: block;
+  margin: 30px 0 20px 0;
+  font-weight: bold;
+  color: #990000;
+  font-size: 1.1em;
+}
+
+/*.select-error {
+  display: none;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #0000;
+  font-size: .90em;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+}*/
+
+.defaultText {
+	background-color: #BEBEBE;
+	color: #053569;
+}
+
+/* DISCLAIMER 
+----------------------------------------------------------*/
+
+
+
+
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+  fieldset p {
+    margin: 2px 12px 10px 10px;
+  }
+
+  fieldset.login label, fieldset.register label, fieldset.changePassword label {
+    display: block;
+  }
+
+  fieldset label.inline {
+    display: inline;
+  }
+
+legend {
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 2px 4px 8px 4px;
+}
+
+
+input[type="checkbox"] {
+  width: 50px;
+}
+
+
+
+/***** T E X T - D A T E *****/
+input[type="text"]:not(:disabled), textarea:not(:disabled), input[type="date"]:not(:disabled) {
+  padding: 2px;
+  height: 25px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  cursor: text;
+  border: 1px solid #000;
+  color: #000044;
+  background-color: white;
+}
+
+input[type="text"]:disabled, textarea:disabled, input[type="date"]:disabled {
+  background-color: lightgray !important;
+  color: #044;
+  height: 25px;
+  width: 225px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  cursor: not-allowed;
+  border: 1px solid #000 !important;
+}
+
+select:disabled {
+	background-color: lightgray !important;
+	border: 1px solid #000 !important;
+}
+
+input.textEntry {
+  width: 320px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  cursor: text;
+  border: 1px solid #000;
+}
+
+input.textEntry:active {
+  box-shadow: 0 0 30px #4b6c9e;
+}
+
+
+
+
+/***** B U T T O N *****/
+input [type="button"]:not(:disabled) {
+  background-color: white;
+  color: white;
+  box-shadow: #424241 5px 5px 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #000;
+}
+
+input [type="button"]:hover:not(:disabled) {
+  background-color: #000044;
+  color: white;
+  height: 30px;
+  border: 2px solid white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #000;
+
+}
+
+input [type="button"]:disabled {
+  color: darkgray;
+  box-shadow: #424241 5px 5px 3px;
+  cursor: not-allowed !important;
+}
+
+
+
+/***** I M A G E *****/
+input[type='image']:hover 
+{
+  border: 1px solid #0054A8;
+  background-color: #336699;
+}
+
+input[type='image']:disabled 
+{
+	cursor: not-allowed !important;
+}
+
+input[type='image']:disabled:hover 
+{
+	border: 1px solid darkgray;
+	background: none;
+}
+
+input[type='image']:disabled:hover span:after {
+	display: none;
+}
+
+select:disabled {
+  cursor: not-allowed;
+  background-color: lightgray;
+}
+
+
+input.passwordEntry {
+  width: 320px;
+  border: 1px solid #ccc;
+}
+
+div.accountInfo {
+  width: 42%;
+}
+
+
+
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page {
+  display: block;
+  min-width: 800px;
+  max-width: 1000px;
+  /*min-height: 824px;*/
+  height: 740px;
+  /* will make entire content expand 
+    & contract when you drag the
+    browser sides in & out
+  */
+  margin: 0 auto;
+}
+
+.main, .default_main {
+  display: block;
+  margin: 0;
+  padding: 0; /* 12px; */
+  min-width: 800px;
+  max-width: 1000px;
+  height: 740px;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  background-color: #bebebe;
+}
+
+.default_main { height: 600px; }
+
+.header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: white; /* #4b6c9e; */
+  width: 100%;
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-top-left: 6px;
+  -moz-border-radius-top-right: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+  .header h1 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0 0 0 20px;
+    color: #000044; /* #f9f9f9; */
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+    text-shadow: 4px 4px 9px #336699; /* #053569; */
+  }
+  .header h4 {
+    font-weight: 500;
+    font-size: medium;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 {
+  margin-top: 0;
+}
+
+.clear {
+  clear: both;
+  width: auto; /* 1002px */
+}
+
+
+
+.title {
+  display: block;
+  float: left;
+  text-align: left;
+  width: 100%;
+  color: #053569;
+}
+  .title h1 {
+    display: inline-block;
+    float: left;
+  }
+
+
+.loginDisplay {
+  font-size: 1.1em;
+  display: block;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #000044;
+  height: 44px;
+  text-shadow: 4px 4px 6px #336699;
+}
+  .loginDisplay a:link {
+    color: white;
+  }
+  .loginDisplay a:visited {
+    color: white;
+  }
+  .loginDisplay a:hover {
+    color: white;
+  }
+
+
+.failureNotification {
+  font-size: 1.2em;
+  color: Red;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.submitButton {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.textArea {
+  padding: 5px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+  .textArea:active {
+    box-shadow: 0 0 30px #4b6c9e;
+  }
+
+  /* main */
+  .contentMain {
+  	clear: both;
+    max-width: 1000px;
+    min-width: 996px;
+	  padding: 0 0 12px 0;
+  }
+    .content {
+      position:relative;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    	float: left;
+	    width: 996px;
+      height: 690px;
+		}
+    .row {
+      clear: both;
+      width: 100%;
+      overflow: hidden;
+      margin: 5px 0;
+    }
+    .label {
+      float: left;
+      text-align: left;
+      width: 150px;
+			margin-top: 5px;
+      font-size: 14px;
+    }
+    .value {
+      float: left;
+      text-align: left;
+    }
+    .input {
+      float: left;
+      text-align: left;
+    }
+
+
+
+.leftCol {
+  padding: 6px 0;
+  margin: 12px 8px 8px 8px;
+  width: 200px;
+  min-height: 200px;
+}
+
+
+.footer {
+  display: inline-block;
+  margin: 10px 0 0 10px;
+  padding: 10px 0 10px 20px;
+	text-align: center;
+  color: #000044;
+  height: 50px;
+  width: 950px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+  .footer #lblDate{
+    margin: 15px 30px 0 0;
+  }
+
+.hiddenText {
+  display: none;
+}
+
+
+.rdpStyle {
+  width: 150px;
+  height: 23px;
+}
+
+/* 
+  MISC
+----------------------------------------------------------*/
+
+/* Try to center contols horizontally  */
+/* ID selector for control with ID="inner" */
+#inner {
+  display: table;
+  margin: 0 auto;
+}
+
+
+
+/*   # name of control
+  ----------------------------------------------------------*/
+#fixedheight {
+  table-layout: fixed;
+}
+
+  #fixedheight td {
+    width: 25%;
+  }
+  /* ID selector for control with ID="fixedheight" */
+  #fixedheight td div {
+    height: 20px;
+    overflow: hidden;
+  }
+
+#wrapper {
+  width: 700px;
+  clear: both;
+}
+
+
+
+
+/*#main_header {
+  display: block;
+  text-align: center;
+  height: 110px;
+  font-size: .90em;
+  min-width: 1250px;
+}*/
+
+
+
+
+#main_footer {
+  display: none !important;
+  background-color: green;
+}
+
+
+
+
+/* Begin jQuery UI */
+.ui-autocomplete {
+  position: absolute !important;
+  z-index: 999999 !important;
+  padding: 0;
+  margin: 0;
+}
+
+  .ui-autocomplete .ui-menu-item {
+    border: solid 1px #EEE !important;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+    .ui-autocomplete .ui-menu-item .ui-menu-item-wrapper {
+      background-color: #FFFFFF;
+      padding: 3px;
+      color: #333;
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+    .ui-autocomplete .ui-menu-item:hover .ui-menu-item-wrapper {
+      background-color: #003366;
+      padding: 3px;
+      color: #FFFFFF;
+      font-weight: normal;
+    }
+    
+    .ui-datepicker {
+      -webkit-box-shadow: 7px 7px 15px 0 rgba(50, 50, 50, 0.65);
+      -moz-box-shadow: 7px 7px 15px 0 rgba(50, 50, 50, 0.65);
+      box-shadow: 7px 7px 15px 0 rgba(50, 50, 50, 0.65);
+      z-index: 99999;
+    }
+    .ui-datepicker-prev {
+      margin-left: 3px;
+      cursor: pointer;
+    }
+    .ui-datepicker-next {
+      float: right;
+      margin-right: 3px;
+      cursor: pointer;
+    }
+    a.ui-datepicker-prev, a.ui-datepicker-next {
+      color: #333 !important;
+      border: solid 1px #999;
+    }
+    a.ui-datepicker-prev span, a.ui-datepicker-next span {
+      color: #333 !important;
+    }
+    .ui-datepicker-title {
+      text-align: center;
+    }
+    .ui-helper-hidden-accessible {
+      display: none !important;
+    }
+
+.ui-dialog {
+  -webkit-box-shadow: 7px 7px 15px 0 rgba(50, 50, 50, 0.65);
+  -moz-box-shadow: 7px 7px 15px 0 rgba(50, 50, 50, 0.65);
+  box-shadow: 7px 7px 15px 0 rgba(50, 50, 50, 0.65);
+  z-index: 99999;
+}
+
+.ui-dialog-content {
+  overflow: hidden;
+}
+
+.ui-dialog-buttonset button:disabled {
+  color: #999;
+}
+/* HIDE ALL CLOSE BUTTONS 
+	 ON JQUERY DIALOGS  */
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+/* End jQuery UI */
+
+
+
+/* Start Error */
+.requiredError, .errorDate {
+  background-color: #FFFF00;
+  color: #800000;
+}
+/* End Error */
+
+

@@ -1,0 +1,23 @@
+﻿
+
+/* Title bar */
+.ui-dialog-titlebar, #ui-id-1 {
+  background-color: ActiveCaption;
+  color: #000044;
+}
+
+
+/* dialog form and button area */
+.ui-dialog, .ui-dialog-buttonpane {
+  background-color: gainsboro;
+}
+
+
+.ui-button, .ui-corner-all .ui-widget {
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+

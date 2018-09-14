@@ -1,0 +1,731 @@
+﻿/*****************************/
+/*          CONTENT          */
+/*****************************/
+/* */
+/***** E L E M E N T S *****/
+
+#btnAdd:hover:not(:disabled) {
+  color: white;
+  background-color: #000044;
+}
+
+body {
+	max-width: 1920px;
+	min-width: 1020px;
+  font-family: Verdana, Geneva, sans-serif; /*  "Lucida Sans Unicode",sans-serif; /* */
+  font-size: 14px;
+}
+
+a {
+	color: #003366;
+}
+	/* disable click action for specific li */
+	a.noClick {
+		pointer-events: none;
+		cursor: default;
+	}
+  a:hover {
+	  color: #6699cc;
+  }
+
+p,cite,code,ul {
+	font-size: 1.2em;
+	padding-bottom: 1.2em;
+}
+
+input [type="text"] {
+  width: 189px;
+  height: 22px;
+  font-size: 12px;
+  border: 1px solid #000;
+}
+
+input [type="button"] {
+  color: #000044;
+  background-color: white;
+  font-weight: bold;    
+  border: groove 1px #000;
+  height: 30px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: #424241 5px 5px 4px;
+}
+
+input [type="button"]:disabled {
+  background-color: #000066;
+  color: white;
+  border: solid 2px #FFF;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: #424241 5px 5px 4px;
+}
+
+
+img [id^="img"] {
+  margin-top: 28px;
+  width: 15px;
+  height: 20px;
+  border: 1px soldi black;
+  box-shadow: 5px 5px 4px #000044;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+
+label {
+  text-shadow: 2px 2px 9px black;
+  color: #000044;   /*#053569;*/
+}
+
+
+
+
+
+/****** C L A S S E S ******/
+.clear {
+	clear: both;
+}
+
+
+/* Add Calendar back/forward icons */
+.ui-icon.ui-icon-circle-triangle-w {
+  width: 16px;
+  height: 16px;
+  background: url("../images/Blue_Back_16x16.png");
+}
+
+.ui-icon.ui-icon-circle-triangle-e {
+  width: 16px;
+  height: 16px;
+  background: url("../images/Blue_Forward_16x16.png");
+}
+
+/* #region ControlArea */
+.controlImages {
+  width: 25px;
+  height: 30px;
+  box-shadow: 5px 5px 4px #000;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+  .transition {
+    -webkit-transform: scale(1.6); 
+    -moz-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+
+#control_area {
+  height: 55px;
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 5px;
+}
+  #control_area input[type='image'] {
+    background-color: transparent;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #control_area #imgDelete { margin-left: 20px; } 
+  #control_area #imgNew { margin-right: 20px; } 
+  #control_area #imgSave { margin-left: 55px; }
+
+  #control_area input[type="text"] {
+    width: 44px !important;
+    margin: 2px 6px 2px 10px;
+    border: 1px solid #808080;
+    background-color: #FBFBFB;
+    padding: 3px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+
+  #control_area span.text-content {
+  position: relative;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  left: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+#control_area span.text-content span {
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 1;
+}
+
+/*#endregion ControlArea*/
+
+.default_spacer{
+	height: 40px;
+	width: 90%;
+}
+
+.default_main {
+  display: block;
+  margin: 0;
+  padding: 0; /* 12px; */
+  min-width: 800px;
+  max-width: 1000px;
+  height: 600px;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  background-color: #bebebe;
+}
+
+.admin_contentMain {
+  height: 625px;
+  width: 1000px;
+  background-color: #bebebe;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+
+.attach_contentMain {
+  height: 800px;
+  width: 1000px;
+  background-color: #bebebe;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+	}
+
+.contracts_contentMain {
+  max-height: 720px;
+	min-height: 700px;
+  width: 1000px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.contracts_contentMain .content {
+  margin-top: 0;
+}
+
+.input {
+  float: left;
+  text-align: left;
+  padding: 5px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+
+
+
+
+
+
+/*############################*/
+/*##*/
+/* #region --- ContractsPage --- */
+.cdp-dvSearch {
+  margin: 0 0 10px 10px;
+  color: white;
+  padding: 5px;
+  border: 1px solid #000044;
+  background-color: lightslategray;
+  max-width: 975px;
+  min-width: 800px;
+  width: 960px;
+  height: 38px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: #424241 7px 7px 4px;
+}
+  .cdp-dvSearch #lblSearchFor, #lblSearchBy {
+    margin-left: 15px;
+    padding: 0;
+    color: white;
+    text-shadow: none;
+  }
+  .cdp-dvSearch #btnSearch {
+		color: #000044;
+    width: 80px;
+    padding: 3px;
+    margin: 0 10px 0 40px;
+  }
+	.cdp-dvSearch #btnAttachments 
+	{
+		float: right;
+		width: 120px;
+		color: #000044;
+		margin: 0 30px 0 40px;
+	}
+  .cdp-dvSearch #btnClearContractsPage, #btnClearAdminPage, #btnAttachments {
+    width: 100px;
+    color: #000044;
+  }
+  .cdp-dvSearch #btnClearContractsPage:hover:not(:disabled), #btnSearch:hover:not(:disabled), #btnClearAdminPage:hover:not(:disabled), #btnAttachments:hover:not(:disabled) {
+    background-color: #000044;
+    color: white;
+    border: 2px solid white;
+  }
+  .cdp-dvSearch li, #txtSearchFor, #btnSearch, #btnClearContractsPage, #btnClearAdminPage, #btnAttachments, #selSearchBy, #selSearchFor {
+    border: groove 1px #000;
+    height: 30px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+  }
+  .cdp-dvSearch #selSearchBy, #selSearchFor {
+    height: 30px;
+    padding: 5px;
+    width: 150px;
+    box-shadow: none;
+    color: #000044;
+    background-color: white;
+  }
+
+
+
+
+
+/* #reagion REP INFO */
+.cdp-dvRepInfo {
+  display: inline-block;
+  float: left;
+  margin: 5px 10px 20px 10px;
+  color: #000044;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid white;
+  width: 420px;
+  height: 460px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: #424241 7px 7px 4px;
+}
+
+  .cdp-dvRepInfo .row {
+    margin: 0 0 3px 0;
+  }
+
+  .cdp-dvRepInfo label {
+    width: 120px;
+  }
+
+  .cdp-dvRepInfo select {
+    width: 229px;
+    float: right;
+    margin-left: 40px;
+    border: groove 1px #000;
+  }
+  
+  .cdp-dvRepInfo input {
+    display: table-cell;
+    width: 224px;
+    margin-left: 40px;
+    float: right;
+  }
+
+#lblInitialPurchaseRequestNumber {
+  display: block;
+  width: 90%; /*215px;*/
+  padding: 10px 0 0 0;
+  margin-bottom: 5px;
+}
+
+#txtContractInitialPurchaseRequestNumber {
+  width: 410px;
+  float: left;
+  margin: 0;
+}
+
+#txtContractDescription {
+  width: 410px;
+  height: 36px;
+  float: left;
+  padding-top: 5px;
+	/*background-color:  #a2afb5;*/
+  border: 1px groove #787171;
+  -webkit-border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  border-radius: 7px 7px 7px 7px;
+}
+
+
+
+
+
+/**** REQUIRED ****/
+#lblRequired {
+	position: absolute; 
+	top: 20px; 
+	left: 25px;
+	font-size: 14px;
+	font-weight: bold;
+	color: darkred;
+	text-shadow: 1px 1px 1px white;
+}
+
+#lblReqF {
+	position: absolute;
+	top: 20px;
+	left: 140px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid blue;
+	background-color: #d2e4f3 !important;
+	margin-left: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+	/* Data Validation visual*/
+    .required 
+    {
+    	border: 1px solid blue !important;
+    	background-color: #d2e4f3 !important;
+    }
+		/* change these colors if you want 
+			 make them !important to work
+		*/
+		.requiredError 
+		{
+			background-color: #d2e4f3;
+			border: 2px solid red ;
+		}
+		.emptyError {
+			border: 2px solid red;
+		}
+
+
+
+
+
+
+
+
+#lblContractDescription { width: 100px; }
+*#txtContractDescription:required:enabled {border: 1px solid blue; background-color: #9bb1c2; }
+
+#txtContractAction:required:enabled {	border: 1px solid blue;  background-color: #9bb1c2;}
+#txtContractAction {
+  width: 410px;
+  height: 36px;
+  float: left;
+  padding-top: 5px;
+	/*background-color:  #a2afb5;*/
+  border: 1px groove #787171;
+  -webkit-border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  border-radius: 7px 7px 7px 7px;
+}
+
+#dvRequiredNote { 
+	margin-top: 10px; 
+}
+
+
+
+.cdp-dvOptions {
+  width: 440px;
+  height: 460px;
+  float: right;
+  margin: 5px 15px 10px 0;
+  padding: 10px 10px 10px 20px;
+  border: 2px solid white;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: #424241 7px 7px 4px;
+}
+
+  .cdp-dvOptions .row {
+    margin-bottom: 12px;
+  }
+
+  .cdp-dvOptions label {
+    display: inline-block;
+    width: 200px;
+  }
+
+  .cdp-dvOptions select {
+    width: 229px;
+    float: right;
+    padding: 5px;
+    margin-left: 40px;
+    border: groove 1px #000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  .cdp-dvOptions input {
+    width: 220px;
+    float: right;
+  }
+
+  .cdp-dvOptions #lblCurrOptYrEndDate {
+    width: 200px;
+  }
+	
+
+.cdp-dvDates {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  padding: 0 0 0 20px;
+  border: 2px solid white;
+  height: 50px;
+  width: 950px;
+  min-width: 820px;
+  background-color: lightslategray;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: #424241 7px 7px 4px;
+}
+
+  .cdp-dvDates [id^="lbl"] {
+    width: 160px;
+  }
+  .cdp-dvDates [id^="dpk"] {
+    text-align: center;
+    height: 20px;
+  }
+  .cdp-dvDates #lblStartDate {
+    margin: 5px 60px 10px 0;
+    color: #000044;   /*#053569;*/
+  }
+
+  .cdp-dvDates #dpkContractStartDate {
+    text-align: center;
+    margin: 5px 0 0 45px;
+    width: 220px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  .cdp-dvDates #lblEndDate {
+    margin: 0 10px 0 90px;
+    color: #000044;   /*#053569;*/
+  }
+
+  .cdp-dvDates #dpkContractEndDate {
+    margin: 5px 20px 0 130px;
+    width: 210px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+
+
+/*#endregion ContractsPage*/
+
+
+
+
+
+
+
+/* Admin Page */
+.cdp-dvAdminChangeLists {
+  /*postion: relative;*/
+  color: white;
+  padding: 5px;
+  margin: 10px 0 0 40px;
+  border: 1px solid #000044;
+  background-color: lightslategray;
+  max-width: 900px; 
+  min-width: 800px;
+  /*width: 0 auto;*/
+  height: 35px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: #424241 7px 7px 4px;
+}
+  .cdp-dvAdminChangeLists #selFieldList, #selReps, #selUsers, #selOthers {
+    display: inline;
+    padding: 5px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: #424241 7px 7px 4px;
+    border: groove 1px #000;
+  }
+  .cdp-dvAdminChangeLists #selOthers { width: 200px; margin-left: 10px; }
+  .cdp-dvAdminChangeLists #lblFieldList {
+    margin-left: 10px;
+    text-shadow: none;
+  }
+
+  .cdp-dvAdminChangeLists #lblNames, #lblFieldList {
+    margin-left: 30px;
+    color: white;
+    box-shadow: none;
+  }
+
+  .cdp-dvAdminChangeLists #btnClearAdminPage {
+    width: 110px;
+    float: right;
+    height: 30px;
+    color: #000044;
+    margin: 0 30px 0 30px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    text-align: center;
+    box-shadow: #424241 5px 5px 4px;
+  }
+  .cdp-dvAdminChangeLists #btnClearAdminPage:hover:not(:disabled) {
+    background-color: #000044;
+    color: white;
+    border: 2px groove white;
+    webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: #424241 5px 5px 4px;
+  }
+
+
+
+
+
+.cdp-dvAdminBody {
+  margin: 20px 20px 0 40px;
+  height: 480px;
+  width: 910px;
+  max-width: 1000px;
+  min-width: 400px;
+  border: 1px solid black;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: #424241 5px 5px 4px;
+}
+
+#cdp-dvSpace {
+  height: 5px;
+  width: 99%;
+  background-color: transparent;
+}
+
+.cdp-dvAddLookupData {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  margin: 20px 11% 40px 9%;
+  min-height: 240px;
+  max-height: 340px;
+  width: 80%;
+}
+  .cdp-dvAddLookupData .row {
+    margin-left: 25px;
+  }
+  .cdp-dvAddLookupData #lblStatus {
+    color: #000044;
+    font-size: 16px;
+  }
+  .cdp-dvAddLookupData #btnAdminDelete, #btnAdminSave {
+    height: 30px;
+    width: 110px;
+    top: -15px;
+    position: relative;
+    color: #000044;
+    background-color: white;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: #424241 5px 5px 4px;
+  }
+  .cdp-dvAddLookupData #btnAdminSave {
+    display: inline-block;
+    margin-left: 260px !important;
+    float: left;
+  }
+  .cdp-dvAddLookupData #btnAdminDelete {
+    margin-left: 30px;
+    float: left;
+  }
+  .cdp-dvAddLookupData #btnAdminDelete:hover, #btnAdminSave:hover {
+      background-color: #000044;
+      color: white;
+      height: 30px;
+      box-shadow: #424241 5px 5px 3px;
+  }
+  .cdp-dvAddLookupData .adminRow {
+    margin: 10px 0 0 25px;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+  }
+  .dcp-dvAddLookupData .btnRow {
+    display: block;
+    width: 100%;
+    margin-top: 80px;
+    height: 100px;
+  }
+
+  .cdp-dvAddLookupData .adminLabel {
+    float: left;
+    text-align: left;
+    padding: 5px 5px 5px 10px;
+    min-width: 300px;
+    width: 360px;
+    text-shadow: 3px 3px black;
+  }
+
+	/* 2 checkboxes for IsActive and IsAdmin */
+	.cdp-dvAddLookupData input [id^="chk"] { 
+		disply: none; 
+		margin: -20px 0 0 0;
+	}
+
+  .cdp-dvAddLookupData label [id^="lblNewListItem"] {
+    padding: 5px 5px 0 10px;
+    margin: 10px 0 0 5px;
+    display: inline-block;
+    max-width: 500px;
+    min-width: 300px;
+    width: 360px;
+    text-shadow: 3px 3px #6699cc;
+    /*height: 70px;*/
+  }
+
+  .cdp-dvAddLookupData [id^='txtNewListItem']
+  {
+    display: inline-block;
+    width: 240px;
+    height: 20px;
+    padding-left: 5px;
+    padding-top: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+	
+/* #endregion AdminPage */
+
+
+
+

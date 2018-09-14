@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="KeyControlApp.Site" %>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <title>KEY CONTROL</title>
+
+		<style type="text/css">
+
+			/*    FOR ASP MENU REPLACEMENT    */
+			ul
+			{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #274972;  
+				color: #dde4ec;
+			}
+		
+			li { float: left; }
+			li a
+			{
+				height: 5px;
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 16px;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			li a:hover 
+			{
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			a:link, a:visited  {	color: White; 	}
+		
+	</style>
+
+
+  <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    <link href="Styles/jquery-ui.css" rel="stylesheet" />
+		<link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+
+    <script src="Scripts/jquery-1.12.4.js"></script>
+    <script src="Scripts/jquery.mask.min.js"></script>
+    <script src="Scripts/jquery-ui.js"></script>
+
+		<script src="Scripts/vars.js"></script>
+		<script src="Scripts/genericFuncs.js"></script>
+		<script src="Scripts/dataFuncs.js"></script>
+		<script src="Scripts/docReady.js"></script>
+
+  </asp:ContentPlaceHolder>
+
+</head>
+<body>
+		<div style="max-width: 1000px; min-width: 800px; height: 15px;">
+
+		</div>
+    <div class="page">
+      <div class="header">
+        <div class="title">
+          <h1>Key Control Register and Inventory</h1>
+        </div>
+
+        <div class="loginDisplay">
+          <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+            <LoggedInTemplate>
+              <span style="text-transform: capitalize; font-weight: bold; padding-bottom: 10px;">Welcome    
+						    <asp:LoginName ID="HeadLoginName" runat="server" /> !
+              </span>
+            </LoggedInTemplate>
+          </asp:LoginView>
+        </div>
+
+        <div class="clear hideSkiplink">
+<%--          <h4>
+            <asp:Menu ID="NavigationMenu" runat="server" CssClass="loginDisplay menuItem" EnableViewState="false" Orientation="Horizontal" Font-Bold="true" ForeColor="White"  >
+              <Items >
+                <asp:MenuItem NavigateUrl="~/Contracts.aspx" Text="Contracts" />
+                <asp:MenuItem NavigateUrl="~/Reports.aspx" Text="Reports" />
+                <asp:MenuItem NavigateUrl="~/Admin.aspx" Text="Admin" />
+                <asp:MenuItem Text="" />
+								<asp:MenuItem Text="" />
+								<asp:MenuItem Text="" />
+								<asp:MenuItem Text="" />
+								<asp:MenuItem Text="" />
+                <asp:MenuItem Text="" />
+                <asp:MenuItem NavigateUrl="https://ikenet2010.ddeamc.amedd.army.mil/default.aspx" Text="IKENET HOME" />
+              </Items>
+            </asp:Menu>
+            <%--<input type="button" id="btnAdd" value="Add Data" disabled="false" />
+          </h4>--%>
+				<div id="NavigationMenu" runat="server" clientidmode="Static" >
+					<ul >
+						<li id="liIssues" runat="server" liType="keyissues" ><a href="KeyIssues.aspx">KEYS ISSUED</a></li>
+						<li id="liSearch" runat="server" liType="search" ><a href="KeySearch.aspx" >KEY SEARCH</a></li>
+						<li id="liAdmin" runat="server" liType="admin" ><a href="Admin.aspx">ADMIN</a></li>
+						<li class="noClick" style="max-width: 800px; min-width: 340px;" ><a href="#a"></a></li>
+						<li id="liIkeNet" style="width: 160px;" liType="ikenet" runat="server" ><a href="https://ikenet2010.ddeamc.amedd.army.mil">IKENET HOME</a></li>
+					</ul>
+				</div>
+
+        </div>
+      </div>
+
+      <div class="main">
+        
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+      <div class="clear">
+      </div>
+
+      <div id="main_Footer"></div>
+    </div>
+
+</body>
+</html>

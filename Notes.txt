@@ -1,0 +1,187 @@
+﻿COLORS
+	#151E3F   Blue1
+	#030027   Blue2
+	#F2F3D9		Beige
+	#DC9E82		Tan
+	#C16E70		Light Brown
+
+
+
+PAGES
+
+Main.aspx
+	Has selections
+		<li>View SCCM PC Inventory</li>
+		<li>View DMLSS Inventory</li>
+		<li>View DMLSS/SCCM Discrepancies</li>
+		<li>View DMLSS/SCCM Reconciled Hand Receipts</li>
+		<li>Search DMLSS</li>
+
+Main.aspx selection View SCCN PC Inventory
+	Has pie chart (42.86% and 57.14%)
+		Click chart section opens model.aspx with querystring of chart params.
+
+		Model.aspx 
+			has another chart (33.33% & 66.67%)
+			Click chart section opens view_sccm.aspx
+
+		View_sccm.aspx 
+			has data grid for chart section's data
+				Has Return to main menu button
+				Has Filter button
+				Has Reset View button
+				Has Export to Excel button 
+
+===================================================================
+Main.aspx selection <li>View DMLSS Inventory</li>
+
+===================================================================
+Main.aspx selection <li>View DMLSS/SCCM Discrepancies</li>
+
+===================================================================
+Main.aspx selection <li>View DMLSS/SCCM Reconciled Hand Receipts</li>
+
+===================================================================
+Main.aspx selection <li>Search DMLSS</li>
+
+
+
+
+main.aspx.cs
+	loads all data in variables for accordians
+===========================================================
+
+DONE
+load dropdown spDistinctSelect
+	params @table, @field, @order
+select PRINTER
+
+DONE
+spUpdateDate, param = @updateType = 1
+updates label text for date (5/31/2018)
+
+
+spPCTot, get total SCCM entries
+
+spDMLSSTot, get total DMLSS entries 
+	params @table, @criteria = 'DMLSS', Nomenclature
+
+spManuInvC, get all SCCM entries
+	params @table, @criteria = 'SMSComputer', ""
+
+spManuInvC, get all SCCM entries
+	params @table, @criteria = 'DMLSS', " WHERE (DMLSS.Nomenclature = '" + Nomenclature + "')"
+
+spCompareECN, get number ECNs in DMLSS not in SCCM
+
+spCompareNameCount, get number Names in SCCM not in DMLSS
+
+spMergeCount, get number of ECNs & Names that match between DMLSS & SCCM
+
+DRAW CHARTS
+
+Chart Director 4.1.0.0 		netchartdir.dll
+Html Agility Pack 1.4.6.0 	htmlagilitypack.dll
+ExportToExcel 1.0.0.0		exporttoexcel.dll
+
+
+
+===========================================
+  FLOW
+===========================================
+	
+	C# on Page_Load main.aspx.cs: ->
+
+		φ Nomenclature for selEquipment dropdown 
+		φ Set selEquipment value to PRINTER
+		φ Get count of PRINTER
+		φ Get distinct Manufacturers by Alias with [spDistinctSelect]
+		φ Get the date of the last database update with [spUpdateDate]
+		φ Get the total number of SCCM entries with [spPCTot]
+		φ Get the total number of DMLSS entries with [spDMLSSTot]
+			Get the SCCM entries with [spManuInvC], put in datatable for chart
+			Get the DMLSS entries with [spManuInvC], put in datatable for chart
+			Get the number of ECNs from DMLSS that are not found in SCCM, put in datatable
+			Get the number of Names from SCCM that are not found in DMLSS, put in datatable
+				Set string NameCount = the number of SCCM entries not found in DMLSS
+			Get the number of ECNs and Names that match between SCCM and DMLSS, put in datatable
+				Set string MergeCount = the number of SECNs and Names that match between SCCM and DMLSS
+			Set the values for the counts of each DMLSS/SCCM correlation
+				Get the data as arrays for pc inventory
+				Get the data as arrays for DMLSS inventory
+				Get the data for DMLSS/SCCM correlation
+
+			Set Chart properties
+			Draw Chart
+
+		Clicking on chart opens page model.aspx
+
+		C# on Page_Load model.aspx.cs: ->
+			Get querystring label
+			Select total count of Models 
+			Get the date of the last update for the SCCM database
+			Get the models for the manufacturer
+			Set Chart properties
+			Draw Chart
+
+
+	----------
+	
+		javascript on selEquipment select: ->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  variable: table             
+  spManuInvC ('SMSComputer', '')      
+  ChartDirector DBTable = List<string>
+  has 2 rows with 2 columns 
+  Row 0 are Labels for chart, Row 1 are values for chart 
+   [0][0] = "DELL"  
+   [0][1] = "IBM"   
+   [1][0] = 4       
+   [1][1] = 3       
+                    
+  
+ variable: tablep            
+  spManuInvC ('DMLSS', ' Where (DMLSS.Nomenclature = '" + Nomenclature + "')"
+  has 2 rows with 6 columns
+  Row 0 are Labels for chart, Row 1 are values for chart 
+ 	[0][0] = "HP"    
+  [0][1] = "SONY"  
+   ...              
+  [0][6] = "LEXMARK INTERNATIONAL"
+  
+  [1][0] = 31      
+  [1][1] = 9       
+   ....             
+  [1][6] = 1       
+                    
+ 
+ variable: dataTable         
+  spCompareECN      
+  returns 2496 rows each row's has 8 columns 
+  row 1             
+ 	[1][0]	"13172"	object {string}
+	[1][1]	"13172"	object {string}
+	[1][2]	"HEWLETT-PACKARD CO (COMPUTERS)"	object {string}
+	[1][3]	"COMPAQ NC6320"	object {string}
+	[1][4]	"LAPTOP,  COMPUTER"	object {string}
+	[1][5]	"DDEAMC, MEDICAL MAINTENANCE, FT GORDON"	object {string}
+	[1][6]	"MCKINSTRY, DELONJIAN"	object {string}
+	[1][7]	"YMEAAD"	object {string}
+ 
+  spCompareNameCount gets number of SCCM entries not in DMLSS 
+  
+  spMergeCount gets the number of ECNs and Names that match between SCCM and DMLSS
+  
+ 

@@ -1,0 +1,138 @@
+/*****************************/
+/*           DEFAULT         */
+/*****************************/
+/* */
+/* *** ELEMENTS *** */
+body {
+	  scrollbar-face-color: red;
+ 	  scrollbar-shadow-color: yellow;
+	  scrollbar-highlight-color: #00FF40;
+ 	  /*scrollbar-3dlight-color: #999999;*/
+	  scrollbar-darkshadow-color: #505050;
+ 	  scrollbar-track-color: #cccccc;
+	  scrollbar-arrow-color: #cccccc;	  
+		scrollbar-3dlight-color: orange;
+		scrollbar-base-color: red;
+		
+		-ms-scrollbar-face-color: red;
+ 	  -ms-scrollbar-shadow-color: yellow;
+	  -ms-scrollbar-highlight-color: #00FF40;
+ 	  /*-ms-scrollbar-3dlight-color: #999999;*/
+	  -ms-scrollbar-darkshadow-color: #505050;
+ 	  -ms-scrollbar-track-color: #cccccc;
+	  -ms-scrollbar-arrow-color: #cccccc;	  
+		-ms-scrollbar-3dlight-color: orange;
+		-ms-scrollbar-base-color: red;
+
+	  -moz-scrollbar-face-color: red;
+ 	  -moz-scrollbar-shadow-color: yellow;
+	  -moz-scrollbar-highlight-color: #00FF40;
+ 	  /*-moz-scrollbar-3dlight-color: #999999;*/
+	  -moz-scrollbar-darkshadow-color: #505050;
+ 	  -moz-scrollbar-track-color: #cccccc;
+	  -moz-scrollbar-arrow-color: #cccccc;	  
+		-moz-scrollbar-3dlight-color: orange;
+		-moz-scrollbar-base-color: red;
+
+}
+
+
+a {
+	color: #003366;
+}
+
+  a:hover {
+	  color: #6699cc;
+  }
+
+p,cite,code,ul {
+	font-size: 1.2em;
+	padding-bottom: 1.2em;
+}
+
+
+
+
+
+/* **** CLASSES **** */
+.clear {
+	clear: both;
+}
+
+.contentPage {
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  display: table;
+  min-width: 700px;
+  max-width: 900px;  
+  max-height: 1000px;
+  min-height: 550px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  border-radius: 8px 8px 8px 8px;
+}
+    .nav {
+      background-color:  #274972; 
+      margin-top: 20px;
+      margin-left: -20px;
+      margin-bottom: 0;
+      height: 45px;
+      width: 940px;
+    }
+
+      .nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; 
+      }
+
+      .nav li {
+        float: left;
+        width: 130px;
+        text-align: center;
+        background-color: #3b81c8;
+        margin-left: 10px;
+        margin-top: 13px;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        -moz-border-radius: 5px 5px 5px 5px;
+        border-radius: 5px 5px 5px 5px;
+      }
+
+      .nav #liIkeHome {
+        float: right;
+        margin-right: 10px;
+      }
+
+      .nav a {
+        display: block;
+        width: 130px;
+        color: white;  
+        text-decoration: none;
+      }
+
+      .nav a:hover {
+        border: 1px solid white;
+        color: #000044;
+        background-color: white;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        -moz-border-radius: 5px 5px 5px 5px;
+        border-radius: 5px 5px 5px 5px;
+        text-decoration: none;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
