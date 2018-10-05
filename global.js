@@ -1,4 +1,4 @@
-﻿
+
 /*
 	COMPILE js to min files
 	https://closure-compiler.appspot.com/home
@@ -12,10 +12,15 @@ function strictFn() {
 }
 
 
+
 var thisPage = '';
 var adminPage = "admin";
 var defaultPage = "default";
 var inventoryPage = "inventory";
+
+var liClicked = '';
+var prevClicked = '';
+
 
 var optionValue = {
 	Option: "",
@@ -40,16 +45,6 @@ var Dialogs = {
 	DialogPage: ''
 };
 
-
-//var sccmData = new google.visualization.DataTable();
-//var sccmDrillData1 ;
-//var sccmDrillData2 = new google.visualization.DataTable();
-
-//var dmlssDataTable = new google.visualization.DataTable();
-//var dmlssDrillData1 = new google.visualization.DataTable();
-//var dmlssDrillData2 = new google.visualization.DataTable();
-
-//var discrepancyData = new google.visualization.DataTable();
 
 var previousSelection = '';
 
@@ -84,8 +79,46 @@ var DmlssGridData = {
 	Custodian: '',
 	Customer: '',
 	CustomerID: ''
-}
+};
 
+var SccmGridData = {
+	ECN: '',
+	Manufacturer: '',
+	Model: '',
+	Nomenclature: '',
+	Custodian: '',
+	Customer: '',
+	CustomerID: ''
+};
+
+var EcnSnSearchData = {
+	ECN: [],
+	ECN5: [],
+	MfrSerialNo: [],
+	Manufacturer: [],
+	Model: [],
+	Nomenclature: [],
+	CommonModel: [],
+	Ownership: [],
+	MaintAct: [],
+	ID: [],
+	Custodian: [],
+	Customer: [],
+	CustomerID: [],
+	OrgName: [],
+	Location: [],
+	AcqCost: [],
+	AcqDate: [],
+	LifeExp: []
+};
+
+
+
+
+
+var gChartManufacturer = '';
+var gChartModel = '';
+var gChartNomenclature = '';
 
 
 
