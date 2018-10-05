@@ -1,0 +1,674 @@
+body {
+}
+
+.ui-tabs {
+  padding: .2em;
+  zoom: 1;
+}
+
+
+#tabsDiv .ui-tabs-active {
+  background-color: #4B6C9E;
+  color: #4B6C9E;
+  box-shadow: 0 0 30px #4b6c9e;
+}
+
+#tabsDiv {
+  background: #e9e0da;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding-bottom: 30px;
+}
+
+
+#button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #4b6c9e;
+}
+
+#button:active {
+  box-shadow: 0 0 30px #4b6c9e;
+  color: #4b6c9e;
+}
+
+input {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 184px;
+  color: #000000;
+  padding: 2px 4px 2px 4px;
+}
+
+input:active {
+  box-shadow: 0 0 30px #4b6c9e;
+}
+
+input[type="button"] {
+  color: #4B6C9E;
+  width: 100px;
+}
+
+input#btnOutlookContact {
+  width: 200px;
+}
+
+label
+{
+    padding: 5px 5px 5px 5px;
+    border: none;
+    color: #3C719B;
+    font-weight: bold;
+}
+
+.titleText label
+{
+    color: White !important;
+}
+
+select {
+  width: 196px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #000000;
+  padding: 2px 1px 2px 4px;
+}
+
+/*option:active {
+  box-shadow: 0 0 30px #4b6c9e;
+}*/
+
+
+textarea {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  color: #000;
+  border-radius: 5px;
+  padding: 2px 4px 2px 4px;
+}
+
+textarea:active {
+  box-shadow: 0 0 30px #4b6c9e;
+}
+
+.ui-draggable, .ui-droppable {
+  background-position: top;
+}
+
+
+.tabContainerViewOutlineDiv {
+  background-color: Scrollbar;
+  height: 500px;
+  border: 1px solid steelblue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.tabTitleLabel {
+  font-weight: bold;
+  margin: 5px 15px;
+  padding: 5px 15px 5px 15px;
+  background-color: #4b6c9e;
+  display: inline-block;
+  color: white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.tabTitleLabelSpan {
+  text-align: center;
+  width: 95%;
+  font-weight: bold;
+  margin: 20px 0 0 20px;
+  background-color: steelblue;
+  display: inline-block;
+  color: white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+
+/*######################################*/
+/*            GENERAL INFO TAB          */
+/*######################################*/
+.GeneralInfoTab {
+  background-color: Scrollbar;
+  height: 560px;
+  border: 1px solid steelblue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.tabLeftSectionDiv {
+  background-color: Scrollbar;
+  float: left;
+  height: 490px;
+  width: 49%;
+  padding: 0 0 0 10px;
+}
+
+/*######################################*/
+/* NAME TABLE within tabLeftSectionDiv  */
+/*######################################*/
+.tabNameSectionTable {
+  width: 90%;
+  margin: 10px 0 5px 5px;
+  padding: 5px 0 5px 0;
+  /*border: 1px solid SteelBlue; */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+  .tabNameSectionTable td:nth-child(1) {
+    width: 70px;
+  }
+
+  .tabNameSectionTable td:nth-child(2) {
+    width: 90px;
+  }
+
+/*######################################*/
+/*  PHONE # TABLE in tabLeftSectionDiv  */
+/*######################################*/
+
+.tabPhoneSectionTable {
+  width: 90%;
+  margin: 10px 0 5px 5px;
+  padding: 5px 0 5px 0;
+  /*border: 1px solid SteelBlue;*/
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+  .tabPhoneSectionTable td:nth-child(1) {
+    width: 70px;
+  }
+
+  .tabPhoneSectionTable td:nth-child(2) {
+    width: 90px;
+  }
+
+/*######################################*/
+/*  ADDRESS table in tabLeftSectionDiv  */
+/*######################################*/
+
+.tabAddressSectionTable {
+  width: 90%;
+  margin: 10px 0 5px 5px;
+  padding: 5px 0 5px 0;
+  /*border: 1px solid SteelBlue; */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+  .tabAddressSectionTable td:nth-child(1) {
+    width: 70px;
+  }
+
+  .tabAddressSectionTable td:nth-child(2) {
+    width: 90px;
+  }
+
+
+/*######################################*/
+/*  contains status and work info in    */
+/*    General info view table           */
+/*######################################*/
+
+.tabRightSectionDiv {
+  background-color: Scrollbar;
+  float: right;
+  height: 493px;
+}
+
+.tabWorkDetailsTable {
+  width: 90%;
+  padding: 5px 5px 5px 0;
+  margin: 5px 5px 5px 5px;
+  height: 477px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  /*border: 1px solid SteelBlue; */
+}
+
+  .tabWorkDetailsTable td:nth-child(1) {
+    width: 180px;
+  }
+
+  .tabWorkDetailsTable td:nth-child(2) {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 120px;
+  }
+
+
+
+/*######################################*/
+/*      Employment Tab                  */
+/*######################################*/
+
+.EmploymentTab {
+  background-color: Scrollbar;
+  height: 540px;
+  border: 1px solid steelblue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin-top: 43px;
+}
+
+.tabEmploymentViewDivLeft {
+  float: left;
+  margin: 10px 10px 10px 20px;
+  padding: 10px 10px 10px 10px;
+  /*border: 1px solid steelblue; */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 45%;
+}
+
+.tabEmploymentLeft td:nth-child(1) {
+  padding-left: 10px;
+  width: 140px;
+}
+
+.tabEmploymentLeft td:nth-child(2) {
+  width: 120px;
+}
+
+.tabEmploymentViewDivRight {
+  display: inline-block;
+  width: 45%;
+  margin: 10px 0 10px 10px;
+  padding: 20px 0 10px 20px;
+  /*border: 1px solid SteelBlue;*/
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  height: 322px;
+}
+
+.tabEmploymentRight td:nth-child(1) {
+  padding-left: 10px;
+  width: 90px;
+}
+
+.tabEmploymentRight td:nth-child(2) {
+  width: 120px;
+}
+
+
+
+/*######################################*/
+/*          Emergency Info View         */
+/*######################################*/
+.EmergencyInfoTab {
+  background-color: Scrollbar;
+  height: 540px;
+  border: 1px solid steelblue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+
+.tabEmergencyViewLeftDiv {
+  margin: 10px 0 0 20px;
+  padding: 10px 10px 10px 10px;
+  /*border: 1px solid steelblue; */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 45%;
+  float: left;
+}
+
+.tabEmergencyViewRightDiv {
+  display: inline-block;
+  margin: 10px 20px 0 0;
+  padding: 10px 10px 10px 10px;
+  /*border: 1px solid steelblue; */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 45%;
+  float: right;
+}
+
+.tabLeftEmergencyTable {
+  width: 90%;
+}
+
+  .tabLeftEmergencyTable td:nth-child(1) {
+    width: 120px;
+  }
+
+  .tabLeftEmergencyTable td:nth-child(2) {
+    width: 120px;
+  }
+
+.tabRightEmergencyTable {
+  width: 90%;
+}
+
+  .tabRightEmergencyTable td:nth-child(1) {
+    width: 120px;
+  }
+
+  .tabRightEmergencyTable td:nth-child(2) {
+    width: 120px;
+  }
+
+
+/*######################################*/
+/*             In Process Tab          */
+/*######################################*/
+.InProcessTab {
+  background-color: Scrollbar;
+  height: 540px;
+  border: 1px solid steelblue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.tabInProcessViewDiv {
+  height: 150px;
+  margin: 5px 0 0 10px;
+  padding: 5px 0 10px 10px;
+  width: 98%;
+}
+
+#tabInProcessViewTable {
+  padding: 15px 0 20px 0;
+  width: auto;
+  height: 80px;
+  /* border: 1px solid steelblue; */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Label for date field */
+.tabInprocesViewTable td:nth-child(1) {
+  width: 200px;
+  background: black;
+}
+/* date pickers */
+.tabInprocesViewTable td:nth-child(2) {
+  margin: 0 20px 0 20px;
+  width: 175px;
+  background: black;
+}
+/* Status Labels */
+#tabInprocesViewTable td:nth-child(3) {
+  width: 60px;
+  padding: 0 0 0 60px;
+  background: black;
+}
+/* Status Combo */
+#tabInprocesViewTable td:nth-child(4) {
+  background: black;
+}
+/* Remark Labels */
+#tabInprocesViewTable td:nth-child(5) {
+  background: black;
+}
+/* Remark texts */
+#tabInprocesViewTable td:nth-child(6) {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+
+/*######################################*/
+/*            Reports Tab              */
+/*######################################*/
+.ReportsTab {
+  background-color: Scrollbar;
+  height: 505px;
+  border: 1px solid steelblue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding-top: 35px;
+  margin-top: 43px;
+}
+
+.tabButtonsDiv {
+  /* border: 1px solid steelblue; */
+  margin: 20px 20px 20px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 96%;
+}
+
+.tabButtonsRow {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+
+.tabButtonsRow button {
+  position: relative;
+  width: 70px;
+  height: 30px;
+  color: #4b6c9e;
+}
+
+.tabButtonsRow button:active {
+  box-shadow: 0 0 30px #4b6c9e;
+}
+
+.tabPageReportButtons
+{
+    width: Auto;
+    min-width: 200px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid 1px #333;
+    color: #000066 !important;
+    background: rgb(247,251,252);
+    background: -moz-linear-gradient(top,  rgba(247,251,252,1) 0%, rgba(217,237,242,1) 40%, rgba(173,217,228,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+    background: linear-gradient(to bottom,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=0 );
+    font-weight: bold;
+}
+.tabPageReportButtons:hover
+{
+    background: rgb(167,207,223);
+    background: -moz-linear-gradient(top,  rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+    background: linear-gradient(to bottom,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=0 );
+    color: #FFFFFF !important;
+}
+
+/*######################################*/
+/*       Save, Email Buttons etc        */
+/*######################################*/
+.recordsControlDiv
+{
+    display: block;
+    background-color: Scrollbar;
+    border: 1px solid steelblue;
+    padding: 5px 0 5px 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+    .recordsControlDiv label
+    {
+        vertical-align: middle; 
+        height: 22px; 
+        margin: 0 0 5px 0;
+        color: #2C5885;
+    }
+    .recordsControlDiv input[type="text"]
+    {
+        padding: 1px 4px 2px 4px;
+        cursor: text !important;
+    }
+    .recordsControlDiv input[type="button"]
+    {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        width: 160px;
+        height: 25px;
+        cursor: pointer;
+        border: solid 1px #333;
+        color: #000066 !important;
+        background: rgb(247,251,252);
+        background: -moz-linear-gradient(top,  rgba(247,251,252,1) 0%, rgba(217,237,242,1) 40%, rgba(173,217,228,1) 100%);
+        background: -webkit-linear-gradient(top,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+        background: linear-gradient(to bottom,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=0 );
+        font-weight: bold;
+    }
+    .recordsControlDiv input[type="button"]:hover
+    {
+        background: rgb(167,207,223);
+        background: -moz-linear-gradient(top,  rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%);
+        background: -webkit-linear-gradient(top,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+        background: linear-gradient(to bottom,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=0 );
+        color: #FFFFFF !important;
+    }
+    .recordsControlDiv input:disabled, .recordsControlDiv input[disabled]:hover
+    {
+        color: #CCC !important;       
+        cursor: pointer;
+        cursor: not-allowed !important;
+        background: rgb(255,255,255);
+        background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
+        background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+        background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );        
+        border: solid 1px #999;
+    }
+    .recordsControlDiv #MailButton
+    {
+	    display: none;
+    }
+    
+/*######################################*/
+/*       Validation                     */
+/*######################################*/
+.imd-required-error 
+{
+    position: absolute;
+    display: inline-block;
+	background-color: #800000 ;
+    color: #FFFF00;
+    padding: 4px 5px 4px 5px;
+    margin-left: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+    .imd-required-error::before
+    {
+	    content: "\25C4";
+	    position: absolute;
+        color: #800000;        
+	    background: none;
+	    margin-left: -14px;
+    }
+.imd-date-error 
+{
+    position: absolute;
+    display: inline-block;
+	background-color: #800000 ;
+    color: #FFFF00;
+    padding: 4px 5px 4px 5px;
+    margin-left: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+    .imd-date-error::before
+    {
+	    content: "\25C4";
+	    position: absolute;
+        color: #800000;        
+	    background: none;
+	    margin-left: -14px;
+    }
+
+/*######################################*/
+/*       Printing                       */
+/*######################################*/
+.ui-dialog
+{ 
+    -webkit-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.65);
+    -moz-box-shadow:    7px 7px 15px 0px rgba(50, 50, 50, 0.65);
+    box-shadow:         7px 7px 15px 0px rgba(50, 50, 50, 0.65);
+    z-index: 99999;
+}
+.ui-dialog-content
+{
+    overflow: hidden;
+}
+.ui-dialog-buttonset button:disabled 
+{
+    color: #999;
+}
+#MOSPrintOptionDialog, #LocationPrintOptionDialog, #CommandGroupPrintOptionDialog
+{
+    display: none;	
+}
+    .PrintOptions
+    {
+        width: 100%;
+    }
+        .PrintOptions thead th
+        {
+            text-align: center;
+            vertical-align: top;
+        }
+        .PrintOptions tbody td
+        {
+            text-align: left;
+            vertical-align: top;
+        }    
+        .PrintOptions tbody td:nth-child(1)
+        {
+            padding-left: 6px;
+        }
+    .PrintOptions tfoot td
+    {
+        text-align: center;
+        vertical-align: middle;
+        padding: 3px 0px 3px 0px;
+    }
+.progressbarPrint 
+{
+	display: inline-block;
+	width: 80%;
+	height: 20px;
+}
