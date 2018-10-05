@@ -1,4 +1,4 @@
-﻿
+
 /*
 	COMPILE js to min files
 	https://closure-compiler.appspot.com/home
@@ -8,9 +8,15 @@
 //======================================================
 //             M I S C   F U N C T I O N S              
 //======================================================
-//
 
-// Use to wait for generic handler to return data  
+
+
+
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
+///                                                             ///
+///      Use to wait for generic handler to return data         ///
+///                                                             ///
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 var runWithTimeout = function (task, args, successCallback, timeoutCallback, timeoutInterval)
 {
 	var timedOut = false;
@@ -37,6 +43,11 @@ var runWithTimeout = function (task, args, successCallback, timeoutCallback, tim
 		}, timeoutInterval);
 	}
 };
+
+
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
+///                                                             ///
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 var delayedTask = function (name, delay, callback) {
 	setTimeout(function () {
 		callback(name + ' - finished.');
@@ -47,7 +58,8 @@ var delayedTask = function (name, delay, callback) {
 
 
 ///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
-///
+///                                                             ///
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 function SelectOptionValue(selectID, value)
 {
 	var sel = document.getElementById(selectID);
@@ -65,9 +77,12 @@ function SelectOptionValue(selectID, value)
 
 
 ///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
-/// Show modal popup window for OK, YES, NO and CANCEL dialogs     
-/// global array runScript must be initialised before calling      
-/// if you need to fire an event from a button or other control    
+///                                                             ///
+/// Show modal popup window for OK, YES, NO and CANCEL dialogs  ///
+/// global array runScript must be initialised before calling   ///
+/// if you need to fire an event from a button or other control ///
+///                                                             ///
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 function ShowPopupMessage(page, message, dialogType) {
 
 	Dialogs.DialogType = dialogType;
@@ -122,7 +137,7 @@ function ShowPopupMessage(page, message, dialogType) {
 			]
 		});
 
-		runScript = new Array();
+		runScript = [];
 		return false;
 	}
 
@@ -184,7 +199,7 @@ function ShowPopupMessage(page, message, dialogType) {
 			]
 		});
 
-		runScript = new Array();
+		runScript = [];
 		return false;
 	}
 
@@ -252,17 +267,21 @@ function ShowPopupMessage(page, message, dialogType) {
 					}
 				}]
 		});
-		runScript = new Array();
+		runScript = [];
 		return false;
 	}
 
-	runScript = new Array();
+	runScript = [];
 	return false;
 }
 
 
-// Use handler to get user info 
-//      (debugging only)        
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
+///                                                             ///
+///                  Use handler to get user info               ///
+///                       (debugging only)                      ///
+///                                                             ///
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 function GetLocalUser() {
 
 	var fromWho = "GetLocalUser()";
@@ -299,6 +318,9 @@ function GetLocalUser() {
 
 
 ///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
+///                                                             ///
+///                                                             ///
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 function LogMiscError(status, statusText, alertMsg, fromWho) {
 
 	if (alertMsg.length === 0 || status.length === 0)
@@ -314,7 +336,10 @@ function LogMiscError(status, statusText, alertMsg, fromWho) {
 
 
 ///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
-/// Unfade effect on Modal Popups                                  
+///                                                             ///
+///               Unfade effect on Modal Popups                 ///
+///                                                             ///
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 function UnFade(element) {
 
 	var op = 0.1;  // initial opacity
@@ -332,7 +357,10 @@ function UnFade(element) {
 
 
 ///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
-/// Fade effect on Modal Popups                                    
+///                                                             ///
+///                Fade effect on Modal Popups                  ///
+///                                                             ///
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 function Fade(element) {
 
 	var op = 1;  // initial opacity
@@ -348,8 +376,30 @@ function Fade(element) {
 }
 
 
+function color_rows() {
+	$("span").each(function (i) {
+		if (i % 10 >= 5) {
+			$(this).css("background-color", "red");
+		}
+	});
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
+///                                                             ///
+///                                                             ///
 ///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 function LogError(status, statusText, errorText, fromWho) {
 
@@ -382,7 +432,9 @@ function LogError(status, statusText, errorText, fromWho) {
 
 
 ///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
-///   Places <options> in <select> based on searchBy selected      
+///                                                             ///
+///   Places <options> in <select> based on searchBy selected   ///
+///                                                             ///
 ///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 function GetSelectOptions(searchBy) {
 	var fromWho = 'getSelectedOptions(' + searchBy + ')';
@@ -427,6 +479,9 @@ function GetSelectOptions(searchBy) {
 
 
 ///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
+///                                                             ///
+///                                                             ///
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 function GetHiddenElement(name) {
 	// If a page doesnt have the control but another does
 	if (document.getElementById(name) === undefined || document.getElementById(name) === null)
@@ -435,9 +490,13 @@ function GetHiddenElement(name) {
 	var values = document.getElementById(name).value;
 	return values;
 }
+
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
+///                                                             ///
+///                                                             ///
 ///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
 function SetHiddenElement(name, value) {
-	if (name === undefined)
+	if (name === undefined || name === '')
 		return;
 
 	// If a page doesnt have the control but another does
@@ -449,13 +508,37 @@ function SetHiddenElement(name, value) {
 	}
 }
 
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
+///    See if RETURN key was pressed                            ///
+///@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///@@///
+function CheckKeyPress(event) {
 
+	event.preventDefault();
+	return event.keyCode === 13 ? true : false;
+}
 
-
-
-
-
-
+function ClearSearchObject() {
+	EcnSnSearchData = {
+		ECN: [],
+		ECN5: [],
+		MfrSerialNo: [],
+		Manufacturer: [],
+		Model: [],
+		Nomenclature: [],
+		CommonModel: [],
+		Ownership: [],
+		MaintAct: [],
+		ID: [],
+		Custodian: [],
+		Customer: [],
+		CustomerID: [],
+		OrgName: [],
+		Location: [],
+		AcqCost: [],
+		AcqDate: [],
+		LifeExp: []
+	};
+}
 
 
 
